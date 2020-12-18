@@ -5,7 +5,7 @@ excerpt: "I start my github blog today."
 categories:
   - Diary
 tags:
-  - [Diary]
+  - [diary]
 
 toc: true
 toc_sticky: true
