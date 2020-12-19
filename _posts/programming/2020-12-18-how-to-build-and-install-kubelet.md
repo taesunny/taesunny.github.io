@@ -3,9 +3,9 @@ title:  "How to build and install Kubernetes Kubelet for your customized Kubelet
 excerpt: "I tested to build and install Kubelet using Kubernetes project."
 
 categories:
-  - kubernetes
+  - programming
 tags:
-  - [kubernetes]
+  - [programming]
 
 toc: true
 toc_sticky: true
