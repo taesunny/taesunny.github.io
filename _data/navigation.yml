@@ -10,6 +10,8 @@ main:
     url: /categories/analysis
   - title: "Programming"
     url: /categories/programming
+  - title: "Study"
+    url: /categories/study
   - title: "Tags"
     url: /tags
   # - title: "Sample Posts"
