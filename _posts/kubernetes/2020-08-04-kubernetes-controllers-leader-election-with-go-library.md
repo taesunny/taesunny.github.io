@@ -5,7 +5,7 @@ excerpt: "Using client-go/tools/leaderelection package."
 categories:
   - kubernetes
 tags:
-  - [analysis, kubelet, kubernetes]
+  - [kubernetes]
 
 toc: true
 toc_sticky: true

@@ -5,7 +5,7 @@ excerpt: "How to get object update events from API Server."
 categories:
   - kubernetes
 tags:
-  - [analysis, kubelet, kubernetes]
+  - [kubernetes]
 
 toc: true
 toc_sticky: true

@@ -5,7 +5,7 @@ excerpt: "I tested to build and install Kubelet using Kubernetes project."
 categories:
   - kubernetes
 tags:
-  - [programming, kubelet, kubernetes]
+  - [kubelet, kubernetes]
 
 toc: true
 toc_sticky: true
