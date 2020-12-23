@@ -8,8 +8,8 @@ main:
     url: /categories
   - title: "Analysis"
     url: /categories/analysis
-  - title: "Programming"
-    url: /categories/programming
+  - title: "Kubernetes"
+    url: /categories/kubernetes
   - title: "Study"
     url: /categories/study
   - title: "Tags"
