@@ -9,8 +9,6 @@ tags:
 
 toc: true
 toc_sticky: true
-
-comments: true
  
 date: 2020-12-23
 last_modified_at: 2020-12-23
