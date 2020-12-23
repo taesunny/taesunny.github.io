@@ -3,7 +3,7 @@ title:  "Kubernetes GET API Watch Feature"
 excerpt: "How to get object update events from API Server."
 
 categories:
-  - analysis
+  - kubernetes
 tags:
   - [analysis, kubelet, kubernetes]
 
