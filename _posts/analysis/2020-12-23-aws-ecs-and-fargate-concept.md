@@ -5,7 +5,7 @@ excerpt: "About AWS ECS and Fargate"
 categories:
   - analysis
 tags:
-  - [analysis, aws, container, cloud]
+  - [analysis, aws, container, amazon, cloud]
 
 toc: true
 toc_sticky: true
@@ -14,9 +14,8 @@ date: 2020-12-23
 last_modified_at: 2020-12-23
 ---
 
-![aws logo](/assets/img/kubernetes/2020-12-23-14-35-23.png)
-
 # AWS ECS and Fargate Concept
+![aws logo](/assets/img/analysis/2020-12-23-14-35-23.png)
 ## AWS ECS
 - Amazon Elastic Container Service의 약자
 - 완전관리형 컨테이너 오케스트레이션 서비스
