@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://taesunny.github.io/sitemap.xml
