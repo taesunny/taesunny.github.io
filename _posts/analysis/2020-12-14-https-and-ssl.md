@@ -162,7 +162,7 @@ openssl rsautl -decrypt -inkey private.pem -in file.ssl -out decrypted.txt
             - 클라이언트가 CA리스트를 확인
             - 내장된 CA 공개키로 인증서 복호화
             - 성공 시 CA의 개인키로 암호화된 문서임을 확인
-            - 클라이언트가 2)의 서버 랜덤 데이터와 1)의 클라이언트 랜덤 데이터를 조합하여 `pre master secret 키` 생성
+            - 클라이언트가 서버 랜덤 데이터와 클라이언트 랜덤 데이터를 조합하여 `pre master secret 키` 생성
             - Session 단계에서 암호화 하기 위해 사용
             - pre master secret은 대칭 키이기 때문에 노출 되면 안됨
             - 서버의 공개키(인증서 안에 들어 있음)로 pre master secret 값을 암호화해서 서버로 전송
