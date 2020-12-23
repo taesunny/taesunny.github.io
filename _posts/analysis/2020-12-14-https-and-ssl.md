@@ -1,5 +1,5 @@
 ---
-title:  "HTTP & SSL(TLS)"
+title:  "HTTP & SSL(TLS) 정리"
 excerpt: "About HTTP and SSL(TLS)"
 
 categories:
@@ -148,37 +148,29 @@ openssl rsautl -decrypt -inkey private.pem -in file.ssl -out decrypted.txt
         - SSL에서는 공개키를 사용하지 않음
     - 과정
         - 클라이언트 서버 접속 (Client Hello), 데이터 주고 받음
-            ```
-                - 클라이언트 측에서 생성한 랜덤 데이터 (Client Random, for 3) 과정)
-                - 클라이언트가 지원하는 암호화 방식
-                - 세션 아이디 (from client to server)
-                    - 연결에 대한 식별자
-                    - 이미 SSL 핸드쉐이킹을 했을 경우 기존의 세션 ID 재활용
-                    - 처음 연결이면 아직 세션 아이디가 없다.
-            ```
+            - 클라이언트 측에서 생성한 랜덤 데이터 (Client Random, for pre master secret 키)
+            - 클라이언트가 지원하는 암호화 방식
+            - 세션 아이디 (from client to server)
+                - 연결에 대한 식별자
+                - 이미 SSL 핸드쉐이킹을 했을 경우 기존의 세션 ID 재활용
+                - 처음 연결이면 아직 세션 아이디가 없다.
         - 서버가 응답 (Server Hello), 데이터 주고 받음
-            ```
-                - 서버 측에서 생성한 랜덤 데이터 (Server Random, for 3) 과정)
-                - 서버가 선택한 암호화 방식
-                - 인증서
-            ```
+            - 서버 측에서 생성한 랜덤 데이터 (Server Random, for pre master secret 키)
+            - 서버가 선택한 암호화 방식
+            - 인증서
         - 클라이언트가 CA 확인 후, pre master secret 키를 서버에 전송
-            ```
-                - 클라이언트가 CA리스트를 확인
-                - 내장된 CA 공개키로 인증서 복호화
-                - 성공 시 CA의 개인키로 암호화된 문서임을 확인
-                - 클라이언트가 2)의 서버 랜덤 데이터와 1)의 클라이언트 랜덤 데이터를 조합하여 `pre master secret 키` 생성
-                - Session 단계에서 암호화 하기 위해 사용
-                - pre master secret은 대칭 키이기 때문에 노출 되면 안됨
-                - 서버의 공개키(인증서 안에 들어 있음)로 pre master secret 값을 암호화해서 서버로 전송
-            ```
+            - 클라이언트가 CA리스트를 확인
+            - 내장된 CA 공개키로 인증서 복호화
+            - 성공 시 CA의 개인키로 암호화된 문서임을 확인
+            - 클라이언트가 2)의 서버 랜덤 데이터와 1)의 클라이언트 랜덤 데이터를 조합하여 `pre master secret 키` 생성
+            - Session 단계에서 암호화 하기 위해 사용
+            - pre master secret은 대칭 키이기 때문에 노출 되면 안됨
+            - 서버의 공개키(인증서 안에 들어 있음)로 pre master secret 값을 암호화해서 서버로 전송
         - 서버가 클라이언트의 pre master secret을 비공개키로 복호화 -> master secret -> session key
-            ```
-                - 클라이언트, 서버 둘다 pre master secret 소유
-                - 서버와 클라이언트가, 특정 과정을 거쳐 pre master secret 값을 master secret 값으로 만듬
-                - master secret으로 session key를 생성
-                - session key로 서로 데이터를 대칭키 방식으로 암호화 한후 주고 받음
-            ```
+            - 클라이언트, 서버 둘다 pre master secret 소유
+            - 서버와 클라이언트가, 특정 과정을 거쳐 pre master secret 값을 master secret 값으로 만듬
+            - master secret으로 session key를 생성
+            - session key로 서로 데이터를 대칭키 방식으로 암호화 한후 주고 받음
         - 핸드쉐이크 종료를 서로에게 전달
 - 단계2: Session (전송)
     - 실제로 서버와 클라이언트가 데이터를 주고 받는 단계
