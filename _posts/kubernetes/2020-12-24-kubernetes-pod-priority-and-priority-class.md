@@ -67,20 +67,20 @@ Critical System Pod들을 위해 예약된 Default System Priority Class이다.
 ## Pod Priority 설정 방법
 1. Priority Class 생성
 2. priorityClassName을 Pod 명세에 추가 하여 Pod을 생성한다.
-    ```
-    apiVersion: v1
-    kind: Pod
-    metadata:
-    name: nginx
-    labels:
-        app: test
-    spec:
-    containers:
-    - name: nginx
-        image: nginx
-        imagePullPolicy: IfNotPresent
-    priorityClassName: sunny-priority
-    ```
+```
+apiVersion: v1
+kind: Pod
+metadata:
+name: nginx
+labels:
+    app: test
+spec:
+containers:
+- name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+priorityClassName: sunny-priority
+```
 
 
 ## 참고
