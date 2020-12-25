@@ -24,8 +24,15 @@ Pod들에 Priority를 설정해 Pod별 중요도를 나타낸다. 스케쥴링 �
 
 ## PriorityClass
 priority를 설정하는 object이다. 특정 namespace에 속하지 않으며, value 필드에 pod에 설정할 priority를 추가한다.
-
-![priority class yaml](/assets/img/kubernetes/2020-12-24-14-22-33.png)
+```
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: sunny-priority
+value: 1000000
+globalDefault: false
+description: "It's my first priority."
+```
 
 ### Fields 상세
 - metadata.name
@@ -60,7 +67,20 @@ Critical System Pod들을 위해 예약된 Default System Priority Class이다.
 ## Pod Priority 설정 방법
 1. Priority Class 생성
 2. priorityClassName을 Pod 명세에 추가 하여 Pod을 생성한다.
-    ![Pod priority class setting yaml](/assets/img/kubernetes/2020-12-24-14-30-35.png)
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+    name: nginx
+    labels:
+        app: test
+    spec:
+    containers:
+    - name: nginx
+        image: nginx
+        imagePullPolicy: IfNotPresent
+    priorityClassName: sunny-priority
+    ```
 
 
 ## 참고
