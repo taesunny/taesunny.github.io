@@ -10,8 +10,8 @@ main:
     url: /categories/analysis
   - title: "Kubernetes"
     url: /categories/kubernetes
-  - title: "Study"
-    url: /categories/study
+  # - title: "Study"
+  #   url: /categories/study
   - title: "Tags"
     url: /tags
   # - title: "Sample Posts"
