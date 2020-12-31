@@ -39,7 +39,7 @@ kubeadm을 이용한 Cluster Upgrade에서는 여러개의 minor version을 한�
 
 Cluster를 Upgrade할 때에는 Control plane node(Master Node)들을 먼저 Upgrade 한 후, 나머지 Worker node들을 Upgrade한다.
 
-## Step 1 - Upgrade할 버전을 확인한다.
+## Step 1 - Check Upgradeable Version
 
 apt-cache madison 명령으로 가능한 kubeadm 버전을 확인 할 수 있다.
 
