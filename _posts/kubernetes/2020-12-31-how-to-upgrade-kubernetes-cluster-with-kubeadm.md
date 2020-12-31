@@ -72,7 +72,7 @@ apt-get install -y --allow-change-held-packages kubeadm=1.17.x-00
 
 ### Drain the control plane node
 
-control plan node(master node)를 drain한다.
+control plane node(master node)를 drain한다.
 
 ```bash
 # replace <node-to-drain> with the name of your node you are draining
@@ -120,7 +120,7 @@ kubectl uncordon <cp-node-name>
 
 ### Upgrade additional control plane nodes
 
-만약 추가 control plan node가 있다면 아래의 명령을 통해 node를 upgrade해 준다.
+만약 추가 control plane node가 있다면 아래의 명령을 통해 node를 upgrade해 준다.
 
 ```bash
 sudo kubeadm upgrade node
@@ -151,7 +151,7 @@ sudo systemctl restart kubelet
 
 ## Step 2 - Upgrading worker nodes
 
-control plan node와 같이 worker node들에 접속해 upgrade해 준다.
+control plane node와 같이 worker node들에 접속해 upgrade해 준다.
 
 ### Upgrade kubeadm
 
