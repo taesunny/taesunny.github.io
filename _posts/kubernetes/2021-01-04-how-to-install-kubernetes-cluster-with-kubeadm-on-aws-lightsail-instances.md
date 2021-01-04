@@ -300,13 +300,17 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 Cluster에 추가할 Worker Node들에서 `kubeadm join`을 통해 Cluster에 Worker Node들을 추가해 준다. Master Node Init 성공시 출력된 `토큰 정보가 포함된 kubeadm join`명령을 사용한다.
 
-> 만약 토큰 정보 재 확인 시, `kubeadm token list`를 통해 확인하거나, 재 생성 할 수 있다.
+> - 만약 토큰 정보 재 확인 시, `kubeadm token list`를 통해 확인하거나, 재 생성 할 수 있다.
 
+- 토큰 재생성 & join command get
+```
+kubeadm token create --print-join-command
+```
+
+- 각 Worker Node에서 join을 수행한다.
 ```bash
 kubeadm join --token <token> <control-plane-host>:<control-plane-port> --discovery-token-ca-cert-hash sha256:<hash>
 ```
-
-각 Worker Node에서 join을 수행한다.
 
 - Node Join 확인
 ![Node Join Success](/assets/img/kubernetes/2021-01-04-14-37-18.png)
@@ -368,3 +372,4 @@ kubectl taint nodes {Target Master Node Name} node-role.kubernetes.io/master-
 - [https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 - [https://docs.projectcalico.org/getting-started/kubernetes/quickstart](https://docs.projectcalico.org/getting-started/kubernetes/quickstart)
 - [https://kubernetes.io/ko/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/ko/docs/reference/kubectl/cheatsheet/)
+- https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/
