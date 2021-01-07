@@ -3,9 +3,9 @@ title:  "Container Instance Services & Kubernetes Services of Public Cloud Provi
 excerpt: "Public Cloud Provider들의 Container Instance, Kubernetes 서비스 분석"
 
 categories:
-  - analysis
+  - cloud
 tags:
-  - [kubernetes, aws, gcp, azure, toast, navercloud]
+  - [cloud, kubernetes, aws, gcp, azure, toast, navercloud]
 
 toc: true
 toc_sticky: true

@@ -3,9 +3,9 @@ title:  "[Java] Annotations"
 excerpt: "About Java Annotations"
 
 categories:
-  - analysis
+  - programming
 tags:
-  - [java, study, analysis]
+  - [java, study, programming]
 
 toc: true
 toc_sticky: true

@@ -3,9 +3,9 @@ title:  "Firecracker Concept"
 excerpt: "About Firecracker"
 
 categories:
-  - analysis
+  - cloud
 tags:
-  - [analysis, opensource, vm, microvm, aws, amazon, cloud]
+  - [cloud, opensource, vm, microvm, aws, amazon]
 
 toc: true
 toc_sticky: true

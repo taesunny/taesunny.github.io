@@ -3,9 +3,9 @@ title:  "AWS ECS and Fargate Concept"
 excerpt: "About AWS ECS and Fargate"
 
 categories:
-  - analysis
+  - cloud
 tags:
-  - [analysis, aws, container, amazon, cloud]
+  - [cloud, aws, container, amazon]
 
 toc: true
 toc_sticky: true

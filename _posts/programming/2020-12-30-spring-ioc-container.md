@@ -3,7 +3,7 @@ title:  "[Spring] Spring IoC Container"
 excerpt: "About Spring IoC Container and Dependency Injection"
 
 categories:
-  - analysis
+  - programming
 tags:
   - [java, study, spring, ioc, di, container]
 

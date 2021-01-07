@@ -3,7 +3,7 @@ title:  "[Java] Reflection 개념"
 excerpt: "About Java Annotations"
 
 categories:
-  - analysis
+  - programming
 tags:
   - [java, study, reflection]
 

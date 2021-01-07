@@ -10,6 +10,10 @@ main:
     url: /categories/analysis
   - title: "Kubernetes"
     url: /categories/kubernetes
+  - title: "Cloud"
+    url: /categories/cloud
+  - title: "Programming"
+    url: /categories/programming
   # - title: "Study"
   #   url: /categories/study
   - title: "Tags"
