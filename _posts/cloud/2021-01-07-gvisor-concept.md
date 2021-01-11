@@ -16,7 +16,7 @@ last_modified_at: 2021-01-07
 
 # gVisor
 
-![gVisor](/assets/img/cloud/2021-01-07-19-42-41.png)
+![gVisor](/assets/img/cloud/2021-01-07-23-18-18.png)
 
 기존의 컨테이너는 컨테이너들과 호스트 사이에 커널을 공유하여 VM에 비해 상대적으로 보안에 취약하다는 단점이 있다. 이러한 컨테이너의 단점을 보안하기 위해 gVisor라는 기술이 개발되고 있다.
 
@@ -26,7 +26,7 @@ gVisor가 Application(Container)의 System Call Layer 역할을 User Layer에서
 
 ## Components
 
-![gVisor Components](/assets/img/cloud/2021-01-07-18-35-31.png)
+![gVisor Components](/assets/img/cloud/2021-01-07-23-18-34.png)
 
 ### Sentry
 Container를 실행시키는 'Sentry'는 Application(Container)의 System Call을 가로채고 응답하는 Application의 Kenel 역할을 한다. Application에서 필요한 'system calls', 'signal delivery', 'memory management', 'page faulting logic', 'threading model' 등의 Kernel 기능을 구현해 제공한다.
