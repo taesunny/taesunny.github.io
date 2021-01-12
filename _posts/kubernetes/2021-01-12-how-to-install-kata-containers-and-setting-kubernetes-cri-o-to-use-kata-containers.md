@@ -73,7 +73,7 @@ sudo kata-runtime kata-check
     ![kata-runtime kata-check](/assets/img/kubernetes/2021-01-12-21-01-58.png)
 
 ---
-# Kubernetes CRI-O Kata Containers Setting
+# Setting Kubernetes CRI-O to use Kata Containers
 
 Kubernetes Cluster에서 Kata Container를 사용해 Pod 생성이 가능하도록 설정한다. 테스트할 Node의 CRI-O에 Kata Containers를 설정한다.
 
