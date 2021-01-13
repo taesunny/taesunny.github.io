@@ -41,13 +41,15 @@ Kata Containers를 사용할 Kubernetes의 Worker Node에 접속해 Kata Contain
 > VERSION 변수를 [[설치 문서 링크](https://github.com/kata-containers/documentation/blob/master/install/centos-installation-guide.md)]를 확인해 설정한다. ex) CentOS 7 인 경우 VERSION=7
 
 > yum-config-manager —add-repo 명령으로 repo 추가 시, 설치 문서 가이드를 이용해 repo url 구성이 힘들 경우 [[레포지터리 사이트](http://download.opensuse.org/repositories/home:/katacontainers:/releases:/x86_64:/)]에서 url을 확인 할 수 있다.
+> 
+> ex) CentOS7, v1.11: http://download.opensuse.org/repositories/home:/katacontainers:/releases:/x86_64:/stable-1.11/CentOS_7/home:katacontainers:releases:x86_64:stable-1.11.repo
 
 ```bash
 $ source /etc/os-release
 $ sudo yum -y install yum-utils
 $ ARCH=$(arch)
 $ BRANCH="${BRANCH:-master}"
-$ VERSIOn="{your version}"
+$ VERSION="{your version}"
 $ sudo -E yum-config-manager --add-repo "http://download.opensuse.org/repositories/home:/katacontainers:/releases:/${ARCH}:/${BRANCH}/CentOS_${VERSION_ID}/home:katacontainers:releases:${ARCH}:${BRANCH}.repo"
 $ sudo -E yum -y install kata-runtime kata-proxy kata-shim
 ```
