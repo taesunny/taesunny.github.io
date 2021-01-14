@@ -10,8 +10,8 @@ tags:
 toc: true
 toc_sticky: true
  
-date: 2020-12-21
-last_modified_at: 2020-12-21
+date: 2021-01-13
+last_modified_at: 2021-01-13
 ---
 # 문제
 - https://programmers.co.kr/learn/courses/30/lessons/42885
