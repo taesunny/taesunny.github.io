@@ -14,6 +14,8 @@ main:
     url: /categories/cloud
   - title: "Programming"
     url: /categories/programming
+  - title: "English"
+    url: /categories/english
   # - title: "Study"
   #   url: /categories/study
   - title: "Tags"
