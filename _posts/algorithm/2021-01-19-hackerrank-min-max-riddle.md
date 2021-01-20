@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-19
-last_modified_at: 2020-01-19
+last_modified_at: 2020-01-20
 ---
 # 문제
 - https://www.hackerrank.com/challenges/min-max-riddle/problem
@@ -242,9 +242,3 @@ public class Solution {
 }
 
 ```
-
----
-
-# Result
-- Runtime: 7 ms, faster than 20.06% of Java online submissions for Longest Common Prefix.
-- Memory Usage: 39.4 MB, less than 5.47% of Java online submissions for Longest Common Prefix.
