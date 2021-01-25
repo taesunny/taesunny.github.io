@@ -51,3 +51,12 @@ author_profile: true
 - Docker
 - Kubernetes
 - Git
+
+## ETC
+---
+
+### Certificates
+
+- CKA
+
+	![CKA](/assets/img/about/cka-certified-kubernetes-administrator.png){: width="100" height="100"}
