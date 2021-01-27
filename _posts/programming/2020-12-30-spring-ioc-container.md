@@ -8,7 +8,7 @@ tags:
   - [java, study, spring, ioc, di, container]
 
 toc: true
-toc_sticky: true
+toc_sticky: false
  
 date: 2020-12-30
 last_modified_at: 2020-12-30
