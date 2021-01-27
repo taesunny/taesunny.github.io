@@ -18,6 +18,8 @@ last_modified_at: 2020-11-10
 
 Test if cgroup pids.max value limits both of processes and threads number using docker with 'pids-limit' config.
 
+---
+
 # Test
 
 ## Test Environment
@@ -26,7 +28,6 @@ Test if cgroup pids.max value limits both of processes and threads number using 
 - Kernel Linux 3.10.0
 - Cgroup v1
 
----
 
 ## Test Program
 
