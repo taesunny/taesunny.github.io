@@ -1,6 +1,6 @@
 ---
-title:  "[Go] Go struct Padding and Alignment"
-excerpt: "About Go struct Padding and Alignment"
+title:  "[Go] Go struct Memory Padding and Alignment"
+excerpt: "About Go struct Memory Padding and Alignment"
 
 categories:
   - programming
