@@ -5,7 +5,7 @@ excerpt: "About Concurrency and Parallelism"
 categories:
   - analysis
 tags:
-  - [java, concurrency, parallelism]
+  - [concurrency, parallelism]
 
 toc: true
 toc_sticky: true
