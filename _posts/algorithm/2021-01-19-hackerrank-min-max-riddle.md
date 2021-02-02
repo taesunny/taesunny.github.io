@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-19
-last_modified_at: 2020-01-20
+last_modified_at: 2021-01-20
 ---
 # 문제
 - https://www.hackerrank.com/challenges/min-max-riddle/problem

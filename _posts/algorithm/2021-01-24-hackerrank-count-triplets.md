@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-24
-last_modified_at: 2020-01-24
+last_modified_at: 2021-01-24
 ---
 # 문제
 - https://www.hackerrank.com/challenges/count-triplets-1/problem

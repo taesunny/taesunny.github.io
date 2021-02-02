@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-22
-last_modified_at: 2020-01-22
+last_modified_at: 2021-01-22
 ---
 # 문제
 - https://www.hackerrank.com/challenges/torque-and-development/problem
