@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-31
-last_modified_at: 2021-01-31
+last_modified_at: 2021-02-02
 ---
 
 # Hook
@@ -117,6 +117,8 @@ function Example() {
     - componentWillUnmount의 경우와 비슷
     - 바로 실행되지 않고, 다음 Effect 실행 전에 return 되었던 함수가 실행된다.
 
+> useEffect가 정의된 function이 다음 랜더링 시 쓰이지 않아도 실행된다.
+
 ``` javascript
 import React, { useState, useEffect } from 'react';
 
@@ -127,7 +129,7 @@ function Example() {
       document.title = `My Current Age: ${age}`;
 
       return () => console.log("Test Log"); // 함수를 리턴할 경우 -> 바로 실행되지 않고, 다음 Effect 실행 전에 수행
-  });
+  }, []);
 
   return (
     <div>
