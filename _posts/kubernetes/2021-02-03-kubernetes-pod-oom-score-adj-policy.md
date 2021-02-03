@@ -1,5 +1,5 @@
 ---
-title:  "Kubernetes Pod oom-score-adj (OOM Killing, Priority Class)"
+title:  "Kubernetes Pod oom-score-adj Policy"
 excerpt: ""
 
 categories:
@@ -22,11 +22,11 @@ Kubernetes에서 Pod의 oom-score-adj를 설정하는 로직에 대해 정리한
 
 ---
 
-# oom-score-adj Setting
+# Pod oom-score-adj Policy
 
-해당 값을 설정하는 주최는 kubelet이다.
+Pod에 해당 값을 설정하는 주최는 kubelet이다.
 
-## 기본 Setting
+## Basic Policy
 
 기본적으로 QoS Class 별로 아래와 같은 oom-score-adj 값이 설정된다.
 
@@ -34,7 +34,7 @@ Kubernetes에서 Pod의 oom-score-adj를 설정하는 로직에 대해 정리한
 - Guaranteed : -998
 - Burstable : 999~2
 
-## Critical Pod Setting
+## Critical Pod Policy
 
 Kubelet에서 'Critical' 하다고 생각되는 Pod들의 oom-score-adj 값을 Guaranteed QoS와 동일한 값인 '-998'로 설정한다.
 
