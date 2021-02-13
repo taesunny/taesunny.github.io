@@ -1,5 +1,5 @@
 ---
-title:  "Kubernetes Pod, Docker 커맨드 설정 정리 및 비교 (Pod command, args & Docker Image ENTRYPOINT, CMD)"
+title:  "Kubernetes Pod, Docker Container 커맨드 설정 정리 및 비교 (Pod command, args & Docker Image ENTRYPOINT, CMD)"
 excerpt: ""
 
 categories:
@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-02-09
-last_modified_at: 2021-02-09
+last_modified_at: 2021-02-13
 ---
 
 # Intro
