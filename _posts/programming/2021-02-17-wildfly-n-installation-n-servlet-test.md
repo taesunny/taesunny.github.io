@@ -18,7 +18,7 @@ last_modified_at: 2021-02-17
 
 JBoss WildFly는 자바 기반의 Java EE 스팩을 지원하는 오픈 소스 WAS(Web Application Server)이다. 기존에 JBoss AS(Application Server) 라는 이름으로 개발되었으나, JBoss EAP(유료 제품, Enterprise Application Platform)와 같은 제품들과 구별하기 위하여 WildFly라는 이름으로 변경되었다. 2006년 레드헷에서 JBoss사를 인수하여 JBoss 프로젝트들이 운영되고 있다.
 
-WildFly 14 버전 부터는 JAVA EE 8, Jakarta EE 8 스팩을 지원한다.
+WildFly 14 버전 부터 JAVA EE 8, Jakarta EE 8 스팩을 지원한다.
 
 ---
 
