@@ -104,7 +104,7 @@ $ WILDFLY_HOME\bin\standalone.bat
 
 최초 관리 페이지 접속 시 User가 등록되어 있지 않다. shell을 사용해 관리자용 혹은 application 용 User를 생성한다. 이후 관리 페이지에서 생성된 User 정보로 로그인이 가능하다.
 
-- 아래 경로의 쉘을 실행
+- 아래 경로의 스크립트를 실행
 
 ```bash
 # For Linux
