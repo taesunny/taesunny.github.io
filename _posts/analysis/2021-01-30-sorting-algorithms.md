@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-30
-last_modified_at: 2021-01-30
+last_modified_at: 2021-02-18
 ---
 
 # 정렬
@@ -35,6 +35,37 @@ last_modified_at: 2021-01-30
 - 제자리 정렬 알고리즘
 - 일반적으로 불안정
 
+#### 예제
+
+```java
+    private static void swap(int[] data, int index1, int index2) {
+        int temp = data[index1];
+        data[index1] = data[index2];
+        data[index2] = temp;
+    }
+
+    private static void selectionSort(int[] data) {
+        int pointer = 0;
+
+        while (pointer < data.length - 1) { // no need to check the last element
+            int minIndex = pointer;
+
+            // find min value's index
+            for (int i = pointer + 1; i < data.length; i++) {
+                if (data[minIndex] > data[i]) {
+                    minIndex = i;
+                }
+            }
+
+            if (pointer != minIndex) {
+                swap(data, pointer, minIndex);
+            }
+
+            pointer++;
+        }
+    }
+```
+
 ### 삽입 정렬
 
 - 간단한 알고리즘
@@ -44,6 +75,23 @@ last_modified_at: 2021-01-30
 - 이미 정렬된 리스트에 새 원소 추가 시, 데이터 크기가 작을 때 효율적
 - 무작위의 데이터에서 안좋음
 - 보통 안정적인 제자리 정렬
+
+#### 예제
+
+```java
+    private static void insertionSort(int[] data) {
+        for (int i = 1; i < data.length; i++) {
+            int toInsert = data[i];
+
+            int targetToMove = 0;
+            for (targetToMove = i - 1; targetToMove >= 0 && data[targetToMove] > toInsert; targetToMove--) {
+                data[targetToMove + 1] = data[targetToMove];
+            }
+
+            data[targetToMove + 1] = toInsert;
+        }
+    }
+```
 
 ### 퀵 정렬
 

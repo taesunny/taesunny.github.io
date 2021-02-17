@@ -1,5 +1,5 @@
 ---
-title:  "[WildFly&Servlet] About WildFly, WildFly Installation and Servlet Application Test"
+title:  "[WildFly & Servlet] About WildFly, WildFly Installation and Servlet Application Test"
 excerpt: ""
 
 categories:
