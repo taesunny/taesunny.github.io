@@ -112,12 +112,80 @@ last_modified_at: 2021-02-18
 - 안정적
 - 제자리 정렬 알고리즘 x
 
+#### 예제
+
+```java
+    // main method
+    private static void mergeSort(int[] data) {
+        int[] temp = new int[data.length];
+
+        mergeSort(data, temp, 0, data.length - 1);
+    }
+
+    private static void mergeSort(int[] data, int[] temp, int start, int end) {
+        if (start < end) {
+            int leftEnd = (start + end) / 2;
+            mergeSort(data, temp, start, leftEnd);
+            mergeSort(data, temp, leftEnd + 1, end);
+            merge(data, temp, start, leftEnd, end);
+        }
+    }
+
+    private static void merge(int[] data, int[] temp, int start, int leftEnd, int end) {
+        int iLeft = start;
+        int iRight = leftEnd + 1;
+        int iResult = start;
+
+        while (iLeft <= leftEnd && iRight <= end) {
+            if (data[iLeft] <= data[iRight]) {
+                temp[iResult++] = data[iLeft++];
+            } else {
+                temp[iResult++] = data[iRight++];
+            }
+        }
+
+        while (iLeft <= leftEnd) {
+            temp[iResult++] = data[iLeft++];
+        }
+
+        // no need to move right side left elements
+        // while (iRight <= end) {
+        //     temp[iResult++] = data[iRight++];
+        // }
+
+        for (int i = start; i < iRight; i++) {
+            data[i] = temp[i];
+        }
+    }
+```
+
 ### 거품 정렬
 
 - 구현이 단순
 - 데이터의 처음부터 인접한 원소를 비교하면서 순서가 맞지 않을 경우 위치를 교체, 순서가 맞는 경우 다시 처음부터 비교하는 로직을 반복
 - 평균, 최악 O(n^2), 최선의 경우 O(n)
 - 가장 느림, 거이 안쓰임
+
+## 예제
+
+```java
+    private static void bubbleSort(int[] data) {
+        int last = data.length - 1;
+        int temp = 0;
+
+        while (last > 0) {
+            for (int i = 0; i < last; i++) {
+                if (data[i] > data[i + 1]) {
+                    temp = data[i];
+                    data[i] = data[i + 1];
+                    data[i + 1] = temp;
+                }
+            }
+
+            last--;
+        }
+    }
+```
 
 ### 힙 정렬
 
