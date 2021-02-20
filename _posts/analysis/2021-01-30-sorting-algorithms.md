@@ -26,7 +26,7 @@ last_modified_at: 2021-02-18
 
 ## 종류
 
-### 선택 정렬
+### 선택 정렬 (Selection Sorting)
 
 - 가장 단순
 - 첫 원소부터 배열 전체를 훑으면서 가장 작은 키를 앞쪽에 있는 원소들과 교체하면서 정렬
@@ -66,7 +66,7 @@ last_modified_at: 2021-02-18
     }
 ```
 
-### 삽입 정렬
+### 삽입 정렬 (Insertion Sorting)
 
 - 간단한 알고리즘
 - 한 번에 한 원소 씩 이미 정렬된 다른 원소들과 비교하면서 적절한 위치에 삽입
@@ -93,7 +93,7 @@ last_modified_at: 2021-02-18
     }
 ```
 
-### 퀵 정렬
+### 퀵 정렬 (Quick Sorting)
 
 - 기준이 될 피벗 값을 고르고, 왼쪽에 집합에 피벗 보다 작은 값들을, 오른쪽 집합에 피벗 보다 큰 값들을 위치 시킴, 더 이상 쪼갤 부분집합이 없을 때까지 각 집합들을 재귀적으로 정렬
 - 피벗값: 전체 데이터를 절반씩으로 쪼갤 수 있어야 가장 이상적
@@ -102,7 +102,53 @@ last_modified_at: 2021-02-18
 - 최선, 평균 복잡도: O(n log(n))
 - 불안정 정렬
 
-### 병합 정렬
+#### 예제
+
+```java
+    private static void quickSort(int[] data) {
+        quickSort(data, 0, data.length - 1);
+    }
+
+    private static void quickSort(int[] data, int start, int end) {
+        if (start < end) {
+            int pivotPosition = partition(data, start, end);
+
+            quickSort(data, start, pivotPosition - 1);
+            quickSort(data, pivotPosition + 1, end);
+        }
+    }
+
+    private static int partition(int[] data, int start, int end) {
+        int pivot = data[start];
+        int left = start;
+        int right = end + 1;
+        int temp = 0;
+
+        do {
+            do {
+                left++;
+            } while (left <= end && data[left] < pivot);
+
+            do {
+                right--;
+            } while (right >= start && data[right] > pivot);
+
+            if (left < right) {
+                temp = data[left];
+                data[left] = data[right];
+                data[right] = temp;
+            }
+        } while (left < right);
+
+        temp = data[start];
+        data[start] = data[right];
+        data[right] = temp;
+
+        return right;
+    }
+```
+
+### 병합 정렬 (Merge Sorting)
 
 - 데이터 집합을 둘 이상의 부분집합으로 나누고, 각 부분집합을 정렬하고, 부분집합들을 합치며 정렬
 - Divide and Conquer(분할 정복형) 방식
@@ -159,7 +205,7 @@ last_modified_at: 2021-02-18
     }
 ```
 
-### 거품 정렬
+### 거품 정렬 (Bubble Sorting)
 
 - 구현이 단순
 - 데이터의 처음부터 인접한 원소를 비교하면서 순서가 맞지 않을 경우 위치를 교체, 순서가 맞는 경우 다시 처음부터 비교하는 로직을 반복
@@ -187,7 +233,7 @@ last_modified_at: 2021-02-18
     }
 ```
 
-### 힙 정렬
+### 힙 정렬 (Heap Sorting)
 
 - 최대 힙 트리나 최소 힙 트리로 정렬
 - 항상 O(n log(n)) 시간 복잡도, 공간 복잡도 O(1)
