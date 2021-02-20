@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2021-01-30
-last_modified_at: 2021-02-18
+last_modified_at: 2021-02-20
 ---
 
 # 정렬
@@ -212,7 +212,7 @@ last_modified_at: 2021-02-18
 - 평균, 최악 O(n^2), 최선의 경우 O(n)
 - 가장 느림, 거이 안쓰임
 
-## 예제
+#### 예제
 
 ```java
     private static void bubbleSort(int[] data) {
@@ -241,6 +241,54 @@ last_modified_at: 2021-02-18
     - 트리의 루트부터 가로 방향으로 1부터 인덱싱 (왼쪽 자식의 인덱싱은 부모의 두배, 오른쪽 자식의 인덱싱은 왼쪽 자식의 인덱스 더하기 1
     - 데이터 삽입 시, 가장 마지막 인덱스에 저장, 부모들과 크기 비교하면서 교환
     - 데이터(가장 크거나 가장 작은 값, 루트 값) 삭제 시, 해당 자리에 힙의 마지막 노드를 위치시킴, 자식들을 비교하면서 교환
+
+#### 예제
+
+```java
+    public static void heapSort(int[] data) {
+        makeHeap(data);
+
+        int temp = 0;
+
+        for (int lastOfUnsortedData = data.length - 1; lastOfUnsortedData >= 0; lastOfUnsortedData--) {
+            temp = data[0]; // max val
+            data[0] = data[lastOfUnsortedData];
+            data[lastOfUnsortedData] = temp;
+
+            heapify(data, 0, lastOfUnsortedData);
+        }
+    }
+
+    public static void makeHeap(int[] data) {
+        for (int i = data.length / 2 - 1; i >= 0; i--) {
+            heapify(data, i, data.length);
+        }
+    }
+
+    public static void heapify(int[] data, int target, int length) {
+        int leftChild = target * 2 + 1;
+        int rightChild = target * 2 + 2;
+        int max = target;
+
+        if (leftChild < length && data[leftChild] > data[target]) {
+            max = leftChild;
+        }
+
+        if (rightChild < length && data[rightChild] > data[max]) {
+            max = rightChild;
+        }
+
+        int temp = 0;
+
+        if (max != target) {
+            temp = data[target];
+            data[target] = data[max];
+            data[max] = temp;
+
+            heapify(data, max, length);
+        }
+    }
+```
 
 ---
 
