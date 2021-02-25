@@ -42,16 +42,16 @@ last_modified_at: 2021-02-25
 - Permutation
 - n개의 숫자에서 r개를 뽑아 정렬하는 가짓수
 - 순서도 고려한다.
-- $nPr$로 표현
-- $nPr={n! \over (n-r)!}$
+- ![](/assets/img/etc/2021-02-26-00-21-49.png)로 표현
+- ![](/assets/img/etc/2021-02-26-00-22-12.png)
 
 ## 조합
 
 - Combination
 - n개의 숫자에서 r개를 뽑는 경우의 수
 - 순서가 달라도 수들이 같으면 같다.
-- $nCr$로 표현
-- $nCr={nPr \over rPr!}={nPr \over r!}$
+- ![](/assets/img/etc/2021-02-26-00-22-29.png)로 표현
+- ![](/assets/img/etc/2021-02-26-00-22-49.png)
 
 # To Study
 
