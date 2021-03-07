@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Taesun Lee"
-  avatar           : "/assets/img/global/snow_duck.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/img/global/snow_duck.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am currently working with Cloud."
   location         : "Bundang"
   email            : superbsun@gmail.com
