@@ -1,5 +1,5 @@
 ---
-title:  "HTTP & SSL(TLS) 정리"
+title:  "HTTPS & SSL(TLS) 정리"
 excerpt: "About HTTP and SSL(TLS)"
 
 categories:
@@ -25,7 +25,7 @@ last_modified_at: 2020-12-14
 - 보안이 강화된 HTTP
 - 내용을 암호화 하여 전송
 
-## HTTP & SSL
+## HTTPS & SSL
 - SSL 프로토콜 위에서 HTTPS가 돌아간다.
 
 ## SSL & TLS
