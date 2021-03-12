@@ -99,6 +99,8 @@ Flutter를 이용하여 구현 완료
 
 App을 설치한 사용자들은, 관리자가 Web UI에서 보내는 Notification들을 수신할 수 있다.
 
+[[참고 Post - Flutter Android App의 Firebase 연동 & FCM Cloud Messaging Test](https://taesunny.github.io/programming/how-to-use-firebase-and-fcm-cloud-messaging-in-flutter-android-app/)]
+
 {:refdef: style="text-align: center;"}
 ![mobile app](/assets/img/toy-project/2021-01-27-23-15-19.png)
 {: refdef}
