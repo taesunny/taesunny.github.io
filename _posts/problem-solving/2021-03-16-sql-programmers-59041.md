@@ -1,5 +1,5 @@
 ---
-title:  "[Programmers] 동명 동물 수 찾기 (59041번) - MySQL Solution"
+title:  "[Programmers][SQL] 동명 동물 수 찾기 (59041번) - MySQL Solution"
 excerpt: ""
 
 categories:
