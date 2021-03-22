@@ -166,7 +166,7 @@ const AnimalDetail = () => {
 export default AnimalDetail;
 ```
 
-해당 예제의 경우 Hooks API를 이용한 방식으로써, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 store의 state로부터 component의 props를 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalDetail.js)]를 통해 확인 할 수 있다.
+해당 예제의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 store의 state로부터 component의 props를 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalDetail.js)]를 통해 확인 할 수 있다.
 
 ### Dispatching Actions (with Hooks API)
 
@@ -204,7 +204,7 @@ export const AnimalList = () => {
 export default AnimalList;
 ```
 
-해당 예제의 경우 Hooks API를 이용한 방식으로써, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 component props와 dispatch function을 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalList.js)]를 통해 확인 할 수 있다.
+해당 예제의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 component props와 dispatch function을 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalList.js)]를 통해 확인 할 수 있다.
 
 ---
 
