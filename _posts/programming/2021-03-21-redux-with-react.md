@@ -143,6 +143,7 @@ export default combineReducers({
 - 예제: 아래와 같이 useSelector()를 사용해 reducer로부터 생산되는 state 데이터들을 사용할 수 있다.
 
 ```jsx
+// AnimalDetail.js
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -165,8 +166,38 @@ const AnimalDetail = () => {
 
 export default AnimalDetail;
 ```
+### Using State (with connect())
 
-해당 예제의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 store의 state로부터 component의 props를 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalDetail.js)]를 통해 확인 할 수 있다.
+[앞의 예제](#using-state-with-hooks-api)의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식인 react-redux의 connect()를 사용해 redux store의 state로부터 component의 props를 mapping할 수 있다.
+
+- 예제: connect()의 첫번째 인자로 state data를 props로 매핑하는 정보 전달
+
+```jsx
+// AnimalDetail.js
+import React from "react";
+import { connect } from "react-redux";
+
+const AnimalDetail = ({ animal }) => {
+    if (!animal) {
+        return <div>Select a Animal</div>;
+    }
+
+    return (
+        <div>
+            <h3>{`Animal Kind: ${animal.kind}`}</h3>
+            <p>
+                <img alt={animal.kind} src={animal.img} width='200px'/>
+            </p>
+        </div>
+    );
+};
+
+const mapStateToProps = (state) => {
+    return { animal: state.selectedAnimal };
+};
+
+export default connect(mapStateToProps)(AnimalDetail);
+```
 
 ### Dispatching Actions (with Hooks API)
 
@@ -175,6 +206,7 @@ export default AnimalDetail;
 - 예제: 아래와 같이 useDispatch()를 사용한다.
 
 ```jsx
+// AnimalList.js
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAnimal } from "../actions";
@@ -204,7 +236,45 @@ export const AnimalList = () => {
 export default AnimalList;
 ```
 
-해당 예제의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식(react-redux의 connect()를 사용해 component props와 dispatch function을 mapping하는 방식)의 경우 [[예제파일 링크](https://github.com/taesunny/react-redux-example/blob/connect-usage/src/components/AnimalList.js)]를 통해 확인 할 수 있다.
+### Dispatching Actions (with connect())
+
+[앞의 예제](#dispatching-actions-with-hooks-api)의 경우 Hooks API를 이용한 방식으로, react-redux에 의해 추천되는 방식이다. Hooks API를 사용하지 않는 기존 방식인 react-redux의 connect()를 사용해 component의 props로 dispatch시 사용할 함수를 mapping할 수 있다.
+
+- 예제: connect()의 두번째 인자로 action을 전달해 dispatch 시 사용
+
+```jsx
+// AnimalList.js
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { selectAnimal } from "../actions";
+
+class AnimalList extends Component {
+    renderList() {
+        return this.props.animals.map((animal) => {
+            return (
+                <div className="item" key={animal.kind}>
+                    <button
+                        className="ui button primary"
+                        onClick={() => this.props.selectAnimal(animal)}
+                    >
+                        Show {animal.kind}
+                    </button>
+                </div>
+            );
+        });
+    }
+
+    render() {
+        return <div className="ui divided list">{this.renderList()}</div>;
+    }
+}
+
+const mapStateToProps = (state) => {
+    return { animals: state.animals };
+};
+
+export default connect(mapStateToProps, { selectAnimal })(AnimalList);
+```
 
 ---
 
