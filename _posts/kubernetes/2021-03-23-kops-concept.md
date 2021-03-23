@@ -1,5 +1,5 @@
 ---
-title:  "kOps Concept"
+title:  "kOps - Kubernetes Bootstrapping Tool"
 excerpt: ""
 
 categories:
