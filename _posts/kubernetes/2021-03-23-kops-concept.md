@@ -51,19 +51,13 @@ last_modified_at: 2021-03-23
 
 cluster를 등록한다.
 
-- 기본 Command:
-
-```bash
-kops create
-```
-
 - spec file로 부터 cluster를 등록 Command:
 
 ```bash
 kops create -f <cluster spec>
 ```
 
-- registry로 부터 cluster를 등록 Command:
+- cluster를 등록 Command:
 
 ```bash
 kops create cluster <cluster name>
@@ -91,13 +85,13 @@ kops rolling-update cluster <cluster name>
 
 ### kops get
 
-registry의 cluster들을 정보를 조회한다.
+cluster들의 정보를 조회한다.
 
 - Command:
 
 ```bash
-kops get clusters
-kops get <cluster name>
+kops get clusters # list
+kops get <cluster name> # for a cluster
 ```
 
 ### kops delete
