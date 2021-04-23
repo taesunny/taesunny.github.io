@@ -7,6 +7,7 @@ categories:
 tags:
   - [kubernetes]
 
+classes: wide
 toc: true
 toc_sticky: true
  
