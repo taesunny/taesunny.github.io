@@ -21,6 +21,10 @@ last_modified_at: 2021-04-23
 ![Kubernetes Cgroup v2 Supporting Status 정리 (2021-04)](/assets/img/kubernetes/2021-04-23-13-53-14.png)
 {: refdef}
 
+---
+
+# History
+
 ## Cgroup v1 Release (2008-01)
 
 구글에 의해 Cgroup v1이 개발되고, Linux 2.6.24 버전에 포함 되었다.
