@@ -39,7 +39,7 @@ cmd/kube-controller-manager/app/controllermanager.go
 ```
 
 ### Git Permalink
-- https://github.com/kubernetes/kubernetes/blob/dff82dc0de47299ab66c83c626e08b245ab19037/cmd/kube-controller-manager/app/controllermanager.go#L255
+- [[링크]](https://github.com/kubernetes/kubernetes/blob/dff82dc0de47299ab66c83c626e08b245ab19037/cmd/kube-controller-manager/app/controllermanager.go#L255)
 
 ### Packages used
 ```
