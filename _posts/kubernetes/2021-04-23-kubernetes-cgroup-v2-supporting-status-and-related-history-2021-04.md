@@ -86,9 +86,18 @@ v1.0.0-rc93 버전 부터 cgroup v2를 정식 지원한다.
 
 ## cri-o cgroup v2 Supporting (2021-02-06)
 
-v1.20부터 pod annotation으로 cgroup v2 unified config를 override 하는 기능이 추가되었다.
+v1.20부터 pod annotation으로 테스트용 cgroup v2 unified config를 override 하는 기능이 추가되었다.
 
 [[PR 링크](https://github.com/cri-o/cri-o/pull/4479)]
+
+- 예시
+
+  ```YAML
+      metadata:
+        name: sunny-test
+        annotations:
+          io.kubernetes.cri-o.UnifiedCgroup.cgroup-test: "memory.high=7000000;memory.low=200000"
+  ```
 
 ## Docker cgroup v2 Supporting (2021-04-12)
 
