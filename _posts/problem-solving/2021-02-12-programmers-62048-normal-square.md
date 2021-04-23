@@ -7,11 +7,12 @@ categories:
 tags:
   - [algorithm, programmers]
 
-toc: true
+classes: wide
+toc: false
 toc_sticky: true
  
 date: 2021-02-12
-last_modified_at: 2021-02-12
+last_modified_at: 2021-02-23
 ---
 
 # 문제
