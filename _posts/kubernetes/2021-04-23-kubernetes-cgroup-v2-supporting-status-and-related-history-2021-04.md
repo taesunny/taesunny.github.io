@@ -72,6 +72,8 @@ K8S v1.19에서 cgroup v2에 대한 첫 alpha release가 포함 되었다.
 
 OCI Runtime Spec에 cgroup v2 관련 내용이 추가 되었다.
 
+> 기존 LinuxResources struct에 'Unified'(map[string]string) 필드가 추가 됨
+
 [[PR 링크](https://github.com/opencontainers/runtime-spec/pull/1040)]
 
 [[문서 링크](https://github.com/opencontainers/runtime-spec/blob/master/config-linux.md#unified)]
@@ -80,13 +82,15 @@ OCI Runtime Spec에 cgroup v2 관련 내용이 추가 되었다.
 
 v1.0.0-rc93 버전 부터 cgroup v2를 정식 지원한다.
 
+> 코드를 보면 oci spec의 기존 resource 정보(Memory, CPU)를 cgroup v2 resource 정보로 converting한 후 systemd의 property들로 설정하여 사용한다.
+
 > Kernel 5.2 이후 버전이 권장되며, systemd의 경우 version 244 이후 버전이 권장된다.
 
 [[문서 링크](https://github.com/opencontainers/runc/blob/master/docs/cgroup-v2.md)]
 
 ## cri-o cgroup v2 Supporting (2021-02-06)
 
-v1.20부터 pod annotation으로 테스트용 cgroup v2 unified config를 override 하는 기능이 추가되었다.
+v1.20부터 pod annotation으로 테스트용 cgroup v2 unified config를 override 하는 기능이 추가되었다. 해당 필드가 설정되어 있을 경우 해당 annotation의 설정들을 OCI Spec-LinuxResouces 객체의 Unified 필드에 설정해 준다.
 
 [[PR 링크](https://github.com/cri-o/cri-o/pull/4479)]
 
@@ -105,6 +109,12 @@ Docker 20.10.6 버전 부터 cgroup v2 정식 지원한다.
 
 [[릴리즈 링크](https://docs.docker.com/engine/release-notes/)]
 
+## 참고) CRI Spec
+
+CRI Spec은 기존과 변화가 없음
+
+[[Spec 링크](https://github.com/kubernetes/cri-api/blob/master/pkg/apis/runtime/v1/api.proto)]
+
 ---
 
 # 참고) Linux cgroup v2 활성화 방법
@@ -121,3 +131,4 @@ Docker 20.10.6 버전 부터 cgroup v2 정식 지원한다.
 
 - https://www.youtube.com/watch?v=u8h0e84HxcE
 - 각 Tool, Spec들의 공식 문서
+- OCI Spec, runc, docker, cri-o github 프로젝트
