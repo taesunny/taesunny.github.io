@@ -84,6 +84,12 @@ v1.0.0-rc93 버전 부터 cgroup v2를 정식 지원한다.
 
 [[문서 링크](https://github.com/opencontainers/runc/blob/master/docs/cgroup-v2.md)]
 
+## cri-o cgroup v2 Supporting (2021-02-06)
+
+v1.20부터 pod annotation으로 cgroup v2 unified config를 override 하는 기능이 추가되었다.
+
+[[PR 링크](https://github.com/cri-o/cri-o/pull/4479)]
+
 ## Docker cgroup v2 Supporting (2021-04-12)
 
 Docker 20.10.6 버전 부터 cgroup v2 정식 지원한다.
