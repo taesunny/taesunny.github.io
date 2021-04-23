@@ -82,7 +82,9 @@ OCI Runtime Spec에 cgroup v2 관련 내용이 추가 되었다.
 
 v1.0.0-rc93 버전 부터 cgroup v2를 정식 지원한다.
 
-> 코드를 보면 oci spec의 기존 resource 정보(Memory, CPU)를 cgroup v2 resource 정보로 converting한 후 systemd의 property들로 설정하여 사용한다.
+> 코드를 보면 oci spec의 기존 resource 정보(Memory, CPU)를 cgroup v2 resource 정보로 converting한 후 systemd의 property들로 설정하여 사용한다. [코드 링크](https://github.com/opencontainers/runc/tree/master/libcontainer/cgroups/fs2)
+
+> oci spec resouce 정보에 Unified 필드가 설정되어 있을 경우, 해당 key, value 정보들을  systemd의 property들로 설정하여 사용한다. [코드 링크](https://github.com/opencontainers/runc/blob/42a18e7f02528a6269b4ad5e01b8204931d921a6/libcontainer/cgroups/systemd/v2.go#L48)
 
 > Kernel 5.2 이후 버전이 권장되며, systemd의 경우 version 244 이후 버전이 권장된다.
 
