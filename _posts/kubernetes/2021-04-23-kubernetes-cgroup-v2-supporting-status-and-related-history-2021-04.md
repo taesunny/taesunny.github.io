@@ -12,7 +12,7 @@ toc: false
 toc_sticky: true
  
 date: 2021-04-23
-last_modified_at: 2021-04-23
+last_modified_at: 2021-04-27
 ---
 
 2021-04 기준으로 Kubernetes와 관련 Tool, Spec등의 Cgroup v2의 지원 현황을 정리한다.
@@ -64,9 +64,10 @@ Kubernetes cgroup v2 Supporting KEP(Kubernetes Enhancement Proposal)가 승인 �
 
 K8S v1.19에서 cgroup v2에 대한 첫 alpha release가 포함 되었다.
 
-[[Init Supporting PR 링크](https://github.com/kubernetes/kubernetes/pull/85218)]
-
 [[진행사항 정리 이슈 링크](https://github.com/kubernetes/enhancements/issues/2254)]
+
+- kubelet에서 QoS별 cgroup 생성 시, runc의 cgroup v2 용 코드들을 사용하여 cgroup들을 생성한다.
+  - [[Initial Supporting PR 링크](https://github.com/kubernetes/kubernetes/pull/85218)]
 
 ## OCI Runtime Spec cgroup v2 Supporting (2020-08-18)
 
